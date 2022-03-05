@@ -73,4 +73,24 @@ public class RegistrationSteps {
         saveRegistrantData(registrant);
     }
 
+
+
+    @Given("user provides the password {string}")
+    public void user_provides_the_password(String password) {
+       Driver.waitAndSendText(rp.firstPasswordTextBox,password );
+    }
+    @Then("user valides the password strength {string}")
+    public void user_valides_the_password_strength(String level) {
+
+        if( 1 == Integer.parseInt(level)){
+            Assert.assertTrue(rp.passwordStrength1.isDisplayed());
+        }else if(2 == Integer.parseInt(level)){
+            Assert.assertTrue(rp.passwordStrength2.isDisplayed());
+        }else if(3 == Integer.parseInt(level)){
+            Assert.assertTrue(rp.passwordStrength3.isDisplayed());
+        }
+
+
+    }
+
 }
