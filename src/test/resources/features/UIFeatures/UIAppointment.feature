@@ -14,4 +14,4 @@ Feature: appointments test
     Then user requests appointment and verifies the success message
     Examples: test data
     |firstname|lastname|SSN|email|phoneNumber|date|
-    |Cetin    |Isilak  |203-38-2837|cetin@gmail.com|253-283-2837|05-06-2022|
+    |Cetin    |Isilak  |203-38-2837|cetin@gmail.com|253-283-2837|06-07-2022|

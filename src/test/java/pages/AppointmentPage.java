@@ -13,7 +13,7 @@ public class AppointmentPage {
 
     }
 
-    @FindBy(xpath = "//*[text()='Make an Appointment']")
+    @FindBy(xpath = "//*[text()='Make an']")
     public WebElement MakeAnAppointmentButton;
 
     @FindBy(id = "firstName")
@@ -31,10 +31,12 @@ public class AppointmentPage {
     @FindBy(id = "phone")
     public WebElement phoneTextbox;
 
+    @FindBy(name = "appoDate")
+    public WebElement dateTextbox;
+
     @FindBy(xpath = "//*[text()='Send an Appointment Request']")
     public WebElement requestButton;
-    @FindBy(name = "appoDate")
-    public WebElement date;
+
 
     @FindBy(xpath = "//*[text()='Appointment registration saved!']")
     public WebElement successMessageToastContainer;
